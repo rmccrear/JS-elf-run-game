@@ -131,7 +131,7 @@ let cookie3 = {
 
 let cookie4 = {
   id: "#cookie-4",
-  left: 1,
+  left: 4,
   top: 4,
 };
 
