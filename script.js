@@ -45,6 +45,9 @@ function walkUp() {
 // *****************************************
 function walkDown() {
   console.log("walk down");
+  elfLocation.top++
+  turnElf("down");
+  placeElf(elfLocation.left, elfLocation.top);
   // TODO: make the elf turn and walk down
 
 }
@@ -60,15 +63,20 @@ console.log(leftButton);
 // *****************************************
 rightButton = $("#right-button");
 rightButton.onclick = walkRight;
+console.log(rightButton);
 // *****************************************
 // TODO: set up the button for walking up
 // *****************************************
-
+upButton =$("#up-button");
+upButton.onclick = walkUp;
+console.log(upButton);
 // *****************************************
 // TODO:  set up the button for walking down
 // *****************************************
 
-
+downButton =$("#down-button");
+downButton.onclick = walkDown;
+console.log(downButton);
 
 
 
@@ -86,6 +94,12 @@ function turnElf(direction) {
   // set the correct image for walking left.
   if(direction === 'left') {
     elfSprite.src = "img/elf_left.png";
+  } else if (direction ==='right'){
+    elfSprite.src = "img/elf_right.png";
+  } else if (direction === 'up'){
+    elfSprite.src = "img/elf_up.png";
+  } else if (direction === 'down'){
+    elfSprite.src = "img/elf_down.png";
   }
 
   // TODO: if the direction is right, up, or down
@@ -119,16 +133,32 @@ turnElf("down");
 // It will also indicate where to place the cookie on the board.
 let cookie1 = {
   id: "#cookie-1",
-  left: 2,
-  top: 4
+  left: 4,
+  top: 1
 }
 
 let cookie2 = {
   id: "#cookie-2",
-  left: 1,
+  left: 2,
+  top: 2
+}
+let cookie3 = {
+  id: "#cookie-3",
+  left: 3,
   top: 2
 }
 
+let cookie4 = {
+  id: "#cookie-4",
+  left: 3,
+  top: 4
+}
+
+let cookie5 = {
+  id: "#cookie-5",
+  left: 3,
+  top: 3
+}
 // TODO: make cookies for 3, 4, and 5.
 // Hint: look in index.html for the ids.
 
@@ -136,7 +166,10 @@ let cookie2 = {
 
 let cookieObjects = [
   cookie1,
-  cookie2
+  cookie2,
+  cookie3,
+  cookie4,
+  cookie5,
   // TODO: put more cookies here.
 
 ];
@@ -156,6 +189,20 @@ cookieElm = document.querySelector(cookie2.id); // select "cookie-2"
 cookieElm.style.left = (100*cookie2.left) + 'px';
 cookieElm.style.top = (100*cookie2.top) + 'px';
 
+console.log(cookie3);
+cookieElm = document.querySelector(cookie3.id); // select "cookie-2"
+cookieElm.style.left = (100*cookie3.left) + 'px';
+cookieElm.style.top = (100*cookie3.top) + 'px';
+
+console.log(cookie4);
+cookieElm = document.querySelector(cookie4.id); // select "cookie-2"
+cookieElm.style.left = (100*cookie4.left) + 'px';
+cookieElm.style.top = (100*cookie4.top) + 'px';
+
+console.log(cookie5);
+cookieElm = document.querySelector(cookie5.id); // select "cookie-2"
+cookieElm.style.left = (100*cookie5.left) + 'px';
+cookieElm.style.top = (100*cookie5.top) + 'px';
 // *****************************************
 // TODO: set the positions of the other cookies (3, 4, and 5)
 // *****************************************
