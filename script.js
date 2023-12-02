@@ -113,20 +113,20 @@ turnElf("down");
 // It will also indicate where to place the cookie on the board.
 let cookie1 = {
   id: "#cookie-1",
-  left: 0.2,
-  top: 0.5,
+  left: 0,
+  top: 1,
 };
 
 let cookie2 = {
   id: "#cookie-2",
-  left: 0.3,
-  top: 2.5,
+  left: 0,
+  top: 3,
 };
 
 let cookie3 = {
   id: "#cookie-3",
-  left: 2.75,
-  top: 2.25,
+  left: 2,
+  top: 3,
 };
 
 let cookie4 = {
@@ -137,8 +137,8 @@ let cookie4 = {
 
 let cookie5 = {
   id: "#cookie-5",
-  left: 1.5,
-  top: 3.8,
+  left: 1,
+  top: 4,
 };
 // TODO: make cookies for 3, 4, and 5.
 // Hint: look in index.html for the ids.
