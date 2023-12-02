@@ -47,7 +47,7 @@ html {
   margin: 0px;
   width: 100px;
   height: 100px;
-  border: solid;
+  border: none;
 }
 
 .cookie-sprite {
