@@ -157,36 +157,34 @@ let cookieElm;
 // *****************************************
 // This code places the cookies on the screen
 // *****************************************
-console.log(cookie1);
-cookieElm = document.querySelector(cookie1.id); // select "cookie-1"
-cookieElm.style.left = 100 * cookie1.left + "px";
-cookieElm.style.top = 100 * cookie1.top + "px";
-
-console.log(cookie2);
-cookieElm = document.querySelector(cookie2.id); // select "cookie-2"
-cookieElm.style.left = 100 * cookie2.left + "px";
-cookieElm.style.top = 100 * cookie2.top + "px";
+//
 
 // *****************************************
 // TODO: set the positions of the other cookies (3, 4, and 5)
 // *****************************************
-console.log(cookie3);
-cookieElm = document.querySelector(cookie3.id);
-cookieElm.style.left = 100 * cookie3.left + "px";
-cookieElm.style.top = 100 * cookie3.top + "px";
+// console.log(cookie3);
+// cookieElm = document.querySelector(cookie3.id);
+// cookieElm.style.left = 100 * cookie3.left + "px";
+// cookieElm.style.top = 100 * cookie3.top + "px";
 
-console.log(cookie4);
-cookieElm = document.querySelector(cookie4.id);
-cookieElm.style.left = 100 * cookie4.left + "px";
-cookieElm.style.top = 100 * cookie4.top + "px";
+// console.log(cookie4);
+// cookieElm = document.querySelector(cookie4.id);
+// cookieElm.style.left = 100 * cookie4.left + "px";
+// cookieElm.style.top = 100 * cookie4.top + "px";
 
-console.log(cookie5);
-cookieElm = document.querySelector(cookie5.id);
-cookieElm.style.left = 100 * cookie5.left + "px";
-cookieElm.style.top = 100 * cookie5.top + "px";
+// console.log(cookie5);
+// cookieElm = document.querySelector(cookie5.id);
+// cookieElm.style.left = 100 * cookie5.left + "px";
+// cookieElm.style.top = 100 * cookie5.top + "px";
 
 // BONUS: Replace the code for placing the cookies
 // on the page with a for-loop
+
+for (cookie of cookieObjects) {
+  cookieElm = document.querySelector(cookie.id);
+  cookieElm.style.left = 100 * cookie.left + "px";
+  cookieElm.style.top = 100 * cookie.top + "px";
+}
 
 // More Bonuses, check if the elf walks into a cookie
 // If so, set the style.display of the cookie to none.
