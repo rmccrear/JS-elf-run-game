@@ -3,6 +3,10 @@ html {
   width: 100%;
 }
 
+body {
+  background: linear-gradient(skyblue, cornflowerblue, navy);
+}
+
 .button-container {
   text-align: center;
   margin: 5px;
@@ -40,6 +44,15 @@ html {
   height: 500px;
 }
 
+header {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 30px;
+  background: -webkit-linear-gradient(green, #262525);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .cookie-box {
   position: absolute;
   left: 0px;
@@ -56,4 +69,9 @@ html {
   height: 40px;
   top: 30px; /* put in the center of the cookie-box*/
   left: 30px; /* put in the center of the cookie-box*/
+}
+
+footer {
+  color: antiquewhite;
+  margin-top: 10px;
 }
