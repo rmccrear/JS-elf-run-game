@@ -194,41 +194,16 @@ for (cookie of cookieObjects) {
   cookieElm.style.top = 100 * cookie.top + "px";
 }
 
-// function eatCookies() {
-//   console.log(cookie.top);
-//   console.log(elfLocation.top);
-//   console.log(cookie.left);
-//   console.log(elfLocation.left);
-//   if (cookie.top === elfLocation.top && cookie.left === elfLocation.left) {
-//     cookieElm = document.querySelector(cookie.id);
-//     cookieElm.style.display = "none";
-//   }
-// }
-// eatCookies();
-
 function eatCookies() {
-  if (cookie1.top === elfLocation.top && cookie1.left === elfLocation.left) {
-    cookieElm = document.querySelector(cookie1.id);
-    cookieElm.style.display = "none";
-  }
-  if (cookie2.top === elfLocation.top && cookie2.left === elfLocation.left) {
-    cookieElm = document.querySelector(cookie2.id);
-    cookieElm.style.display = "none";
-  }
-  if (cookie3.top === elfLocation.top && cookie3.left === elfLocation.left) {
-    cookieElm = document.querySelector(cookie3.id);
-    cookieElm.style.display = "none";
-  }
-  if (cookie4.top === elfLocation.top && cookie4.left === elfLocation.left) {
-    cookieElm = document.querySelector(cookie4.id);
-    cookieElm.style.display = "none";
-  }
-  if (cookie5.top === elfLocation.top && cookie5.left === elfLocation.left) {
-    cookieElm = document.querySelector(cookie5.id);
-    cookieElm.style.display = "none";
+  for (cookie of cookieObjects) {
+    let cookieElm = document.querySelector(cookie.id);
+    console.log(cookie.top);
+    if (cookie.top === elfLocation.top && cookie.left === elfLocation.left) {
+      cookieElm.style.display = "none";
+      console.log(cookie);
+    }
   }
 }
-eatCookies();
 
 // More Bonuses, check if the elf walks into a cookie
 // If so, set the style.display of the cookie to none.
